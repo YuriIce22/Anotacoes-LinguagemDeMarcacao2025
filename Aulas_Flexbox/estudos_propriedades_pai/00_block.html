@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display:Block-00</title>
+        <style>
+            /* Personalização do Container e dos Itens */
+            body {background-color: #ebd5d5;}
+            .titulo {background-color: rgba(179, 21, 21, 0.418); width: 100%; text-align: center;}
+            .pai {background-color: rgba(179, 21, 21, 0.418); border-radius: 15px; padding: 20px;}
+            .filhos { background-color: rgb(252, 240, 240); border: 1px solid rgba(0, 0, 0, 0.404); border-radius: 15px; padding: 20px;}
+            
+            /* CONFIGURAÇÃO - FLEX BOX */
+            /* CONTAINER - (Pai) */
+            .container {
+                display: block; /* Padrão */
+                
+            }
+
+            /* ITEMS - (Filhos) */
+            .items {
+                /* flex: auto; */
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="titulo">Estudos FlexBox-00</h1>
+        </header>
+        <main>
+            <h2>Container (Pai) - Display:Block (Padrão)</h2>
+            <h3>Elemento - bloco</h3>
+            <div class="pai container">
+                <div class="filhos items item-1">Item 01</div>
+                <div class="filhos items item-2">Item 02</div>
+                <div class="filhos items item-3">Item 03</div>
+                <div class="filhos items item-4">Item 04</div>
+            </div>
+            <br><hr>
+
+            <h2>Container (Pai) - Display:Block (Padrão)</h2>
+            <h3>Elemento - linha</h3>
+            <div class="pai container">
+                <input type="text" placeholder="texto">
+                <input type="tel" placeholder="tel">
+                <input type="email" placeholder="email">
+
+            </div>
+        </main>
+    </body>
+
+</html>

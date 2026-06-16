@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 grafico centralizar itens</title>
+    <style>
+        
+        body{
+            background-color: whitesmoke; 
+            height: 100vh; 
+            width: 100vw;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .pai{
+            background-color: rgb(185, 185, 185); 
+            padding: 20px; 
+            gap: 10px;
+        }
+        
+        .container.linha {
+            height: 800px;
+            width: 800px;
+            display: flex;                      
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: xx-large;
+        }
+                                                                                                    
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="pai container linha">
+            <div class="filhos items item-1">🏠</div>
+            <div class="filhos items item-2">✉️</div>
+            <div class="filhos items item-3">⚙️</div>
+            <div class="filhos items item-4">🔔</div>
+            <div class="filhos items item-4">👤</div>
+        </div>
+
+    </main>
+</body>
+
+</html>

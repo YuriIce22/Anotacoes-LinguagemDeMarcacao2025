@@ -1,0 +1,52 @@
+Sub alunos_certificados()
+
+    'Declarando as variaveis'
+    Dim objeto_word As Object
+    Dim arquivo_certificados As Object
+    Dim selecao As Object
+    Dim ult_linha As Long
+    Dim ult_coluna As Long
+    Dim linha As Long
+    Dim coluna As Long
+   
+    'Criar OBJETO WORD'
+    Set objeto_word = CreateObject("Word.Application")
+    objeto_word.Visible = True
+       
+    'Descobrir ultimas linhas e colunas'
+    ult_linha = Cells(Rows.Count, 1).End(xlUp).Row
+    ult_coluna = Cells(1, Columns.Count).End(xlToLeft).Column
+   
+    'Loop para cada linha dos dados'
+    For linha = 2 To ult_linha
+        'Abrir modelo'
+        Set arquivo_certificados = objeto_word.Documents.Open("C:\Users\Aluno\Desktop\Exercicio\Exercicio5\Exercicio5.docx")
+        Set selecao = arquivo_certificados.Application.Selection
+       
+        For coluna = 1 To ult_coluna
+            With selecao.Find
+                .Text = Cells(1, coluna).Value
+                .Replacement.Text = Cells(linha, coluna).Value
+                .Execute Replace:=2 'wdReplaceAll = 2'
+            End With
+        Next coluna
+       
+       
+            'Salvar DOC'
+            arquivo_certificados.SaveAs2 "C:\Users\Aluno\Desktop\Exercicio\Exercicio5\Preenchido\CERTIFICADOS - " & Cells(linha, 1).Value & " .docx"
+            arquivo_certificados.Close False  'Fechar DOC'
+            Cells(ult_linha + 1, 1).Value = "Progresso: " & (linha - 1) & "/" & (ult_linha - 1) 'Progresso'
+        Next linha
+       
+            'Apagar progresso'
+            Cells(ult_linha + 1, 1).ClearContents
+           
+            'Fechar Word'
+            objeto_word.Quit
+           
+            'Mensagem positiva
+            MsgBox "Certificados criados!"
+
+End Sub
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox-06</title>
+    <style>
+        /* Personalização do Container e dos Itens */
+        body {background-color: #ebd5d5;}
+        .titulo {background-color: rgba(21, 134, 179, 0.418); width: 100%; text-align: center;}
+        .pai {background-color: rgba(21, 134, 179, 0.418); border-radius: 15px; padding: 20px; gap: 10px;}
+        .filhos { background-color: rgb(252, 240, 240); border: 1px solid rgba(0, 0, 0, 0.404); border-radius: 15px; padding: 20px;}
+              
+        /* CONFIGURAÇÃO - FLEX BOX */
+        /* CONTAINER - (Pai) */
+        .container {
+            display: flex;
+            height: 300px;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+
+        }
+
+        /* ITEMS - (Filho) */
+        .filhos {
+            /* Config FLEX BOX */
+            text-align: center;
+
+        }
+        /* APLICANDO PROPIEDADES ORDER NOS FILHOS */
+        
+        /* GROW - (0) ZERO é o padrão, define se o item-filho cresce ou não */
+        /* SHRINK - (1) UM é o padrão, diminui para o tamanho da menor palavra */
+        /* BASIS - (AUTO) AUTO é o padrão, se torna o comprimento do item-filho */
+        /* GROW - não crescer (0), SHRINK - não encolher (1), BASIS - comprimento inicial (AUTO) */
+        #item-1 {align-self: auto;} 
+        #item-2 {align-self: center;} 
+        #item-3 {align-self: flex-end;} 
+        #item-4 {align-self: stretch;} 
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Estudos Propriedades Filhos</h1>
+    </header>
+    <main>
+        <div class="pai container">
+            <!-- STYLE INLINE -->
+            <!-- <div class="filhos item-1" style="order: 4;">Item 01</div> -->
+
+            <!-- Inserindo IDS nos Itens/Filhos -->
+            <div class="filhos item-1" id="item-1">Item 01</div>
+            <div class="filhos item-2" id="item-2">Item 02</div>
+            <div class="filhos item-3" id="item-3">Item03</div>
+            <div class="filhos item-4" id="item-4">Item 04</div>
+        </div>
+    </main>
+</body>
+
+</html>

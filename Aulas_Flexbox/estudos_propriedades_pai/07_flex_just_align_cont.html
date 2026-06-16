@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox-07</title>
+    <style>
+        /* Personalização do Container e dos Itens */
+        body {background-color: #ebd5d5;}
+        .titulo {background-color: rgba(21, 134, 179, 0.418); width: 100%; text-align: center;}
+        .pai {background-color: rgba(21, 134, 179, 0.418); border-radius: 15px; padding: 20px; gap: 10px;}
+        .filhos { background-color: rgb(252, 240, 240); border: 1px solid rgba(0, 0, 0, 0.404); border-radius: 15px; padding: 20px;}
+              
+        /* CONFIGURAÇÃO - FLEX BOX */
+        /* CONTAINER - (Pai) */
+        .container.linha {
+            height: 300px;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap-reverse; */
+            /* Shorthand */                             
+            flex-flow: row wrap;
+            align-content: center;
+        }
+                                                                                                                    
+        .container.coluna {
+            height: 450px;
+            display: flex;
+            /* flex-direction: column;
+            flex-wrap: wrap-reverse; */
+            /* Shorthand */
+            flex-flow: column wrap;  
+            align-content: center;
+        }
+
+        /* ITEMS - (Filho) */
+        .items {
+            /* Config FLEX BOX */
+            /* flex: auto; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Estudos FlexBox-07</h1>
+    </header>
+    <main>
+        <h2>Container (Pai) - Display:Flex (Padrão Linha)</h2>
+        <div class="pai container linha">
+            <div class="filhos items item-1">Item 01</div>
+            <div class="filhos items item-2">Item 02</div>
+            <div class="filhos items item-3">Item 03</div>
+            <div class="filhos items item-4">Item 04</div>
+
+        </div>
+
+        <h2>Container (Pai) - Display:Flex (Padrão Coluna)</h2>
+        <div class="pai container coluna">
+            <div class="filhos items item-1">Item 01</div>
+            <div class="filhos items item-2">Item 02</div>
+            <div class="filhos items item-3">Item 03</div>
+            <div class="filhos items item-5">Item 05</div>
+            <div class="filhos items item-6">Item 06</div>
+            <div class="filhos items item-7">Item 07</div>
+            <div class="filhos items item-8">Item 08</div>
+            <div class="filhos items item-5">Item 05</div>
+            <div class="filhos items item-6">Item 06</div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>

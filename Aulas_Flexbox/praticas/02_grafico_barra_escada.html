@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 grafico barra escada</title>
+    <style>
+        
+        body{
+            background-color: whitesmoke; 
+            height: 100vh; 
+            width: 100vw;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .pai {background-color: rgb(185, 185, 185); padding: 20px; gap: 10px;}
+        .filhos { background-color: rgb(39, 190, 25); border-radius: 8px 8px 5px 5px; padding: 20px;}
+        
+        .container.linha {
+            height: 800px;
+            width: 800px;
+            display: flex;                      
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: xx-large;
+        }
+                                                                                                    
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="pai container linha">
+            <div class="filhos items item-1" style="height: 10px; width: 15px;"></div>
+            <div class="filhos items item-1" style="height: 70px; width: 15px;"></div>
+            <div class="filhos items item-1" style="height: 150px; width: 15px;"></div>
+        </div>
+
+    </main>
+</body>
+
+</html>

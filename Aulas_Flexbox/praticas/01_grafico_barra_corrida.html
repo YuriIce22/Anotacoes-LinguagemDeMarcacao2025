@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 grafico centralizar itens</title>
+    <style>
+
+        
+        body{
+            background-color: whitesmoke; 
+            height: 100vh; 
+            width: 100vw;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .pai{
+            background-color: rgb(185, 185, 185); 
+            padding: 20px; 
+            background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, 
+            rgba(0, 108, 233, 0.7) 50%, 
+            rgba(0, 0, 0, 0.8) 100%),
+             url("./formula-01.jpg");
+            background-position: center center;
+            background-size: contain;
+        }   
+        
+        .container.linha {
+            height: 800px;
+            width: 800px;
+            display: flex;                      
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+        
+        .filhos{ 
+            background-color: black; 
+            color: white;
+            border: 1px solid rgb(126, 125, 125); 
+            border-radius: 5px; 
+            padding: 20px;
+            width: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 -2px;
+
+        }
+
+        .filhos-texto{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(17, 125, 226);
+            width: 43px;
+            
+        }
+
+        #podio-1 {order: 2; align-self: flex-end; height: 200px; z-index: 1;}
+        #podio-2 {order: 1; align-self: flex-end; height: 150px;}
+        #podio-3 {order: 3; align-self: flex-end; height: 100px;}
+                                                                                                    
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="pai container linha">
+
+
+
+            <div class="filhos 1" id="podio-1">
+                <div class="filhos-texto">1</div>
+            </div>
+            <div class="filhos 2" id="podio-2">
+                <div class="filhos-texto">2</div>
+            </div>
+            <div class="filhos 3" id="podio-3">
+                <div class="filhos-texto">3</div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
